@@ -3,6 +3,7 @@ package at.Ajtnik.SpotCollection;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -20,6 +21,13 @@ public class MyActivity extends Activity {
         searchButton = (ImageButton)findViewById(R.id.btSearch);
         menuButton  = (ImageButton)findViewById(R.id.btMenu);
         searchText = (EditText)findViewById(R.id.tfSearchText);
+
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnMenu();
+            }
+        });
 
     }
 
