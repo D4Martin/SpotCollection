@@ -4,10 +4,16 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
-    <TextView
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="50" android:orientation="horizontal">
+        <ImageButton android:layout_width="50" android:layout_height="fill_parent" android:focusable="true"
+                     android:src="@drawable/menu_icon" android:onClick="OnMenu" android:id="@+id/btMenu"/>
+        <EditText android:layout_width="280" android:layout_height="fill_parent" android:id="@+id/tfSearchText"/>
+        <ImageButton android:layout_width="fill_parent" android:layout_height="fill_parent"
+                     android:src="@drawable/search_icon" android:id="@+id/btSearch"/>
+    </LinearLayout>
+    <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
-            />
+            android:layout_height="fill_parent"
+            android:id="@+id/LogoSplashScreen"/>
 </LinearLayout>
 
