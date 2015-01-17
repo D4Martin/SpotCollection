@@ -5,13 +5,13 @@
                 android:orientation="vertical">
 
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Spots"/>
+            android:text="Spots" android:id="@+id/btSpots"/>
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Favourites"/>
+            android:text="Favourites" android:id="@+id/btFavourites"/>
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Profile"/>
+            android:text="Profile" android:id="@+id/btProfile"/>
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Settings"/>
+            android:text="Settings" android:id="@+id/btSettings"/>
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:text="MySpots"/>
 </LinearLayout>

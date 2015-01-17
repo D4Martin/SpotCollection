@@ -9,9 +9,19 @@ import android.widget.ImageButton;
 
 public class MyActivity extends Activity {
 
-    ImageButton searchButton;
-    ImageButton menuButton;
-    EditText searchText;
+    private ImageButton searchButton;
+    private ImageButton menuButton;
+    private EditText searchText;
+
+    private int searchRadius;
+
+    public int getSearchRadius() {
+        return searchRadius;
+    }
+
+    public void setSearchRadius(int searchRadius) {
+        this.searchRadius = searchRadius;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
