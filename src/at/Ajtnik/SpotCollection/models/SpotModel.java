@@ -24,7 +24,7 @@ public class SpotModel extends ArrayAdapter<Spot>{
 
 public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
 {
-    super(context, R.layout.row, itemsArrayList);
+    super(context, R.layout.item_row, itemsArrayList);
 
     this.context = context;
     this.itemsArrayList = itemsArrayList;
@@ -58,5 +58,9 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
         return rowView;
     }
 
-
+    @Override
+    public void add(Spot object) {
+        super.add(object);
+        itemsArrayList.add(object);
+    }
 }
