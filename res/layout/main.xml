@@ -25,5 +25,11 @@
             android:id="@+id/btLogin"
             android:text="Login"/>
 
+    <CheckBox android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="10"
+            android:id="@+id/cbSaveLoginData"
+            android:text="Save login data"/>
+
 </LinearLayout>
 

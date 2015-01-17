@@ -16,9 +16,11 @@ public class Spot implements Serializable{
     private Difficulty difficulty;
     private double xCoord;
     private double yCoord;
+    private String description;
 
-    public Spot(String name, double xCoord, double yCoord ,int rating, Bitmap image, Difficulty difficulty) {
+    public Spot(String name, String description,double xCoord, double yCoord ,int rating, Bitmap image, Difficulty difficulty) {
         this.name = name;
+        this.description = description;
         this.xCoord = xCoord;
         this.yCoord = yCoord;
         this.rating = rating;
@@ -36,6 +38,14 @@ public class Spot implements Serializable{
 
     public int getRating() {
         return rating;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setRating(int voting) {
