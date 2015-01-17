@@ -9,17 +9,17 @@ import android.graphics.Bitmap;
 public class Spot {
 
     private String name;
-    private int voting;
+    private int rating;
     private Bitmap image;
     private Difficulty difficulty;
     private double xCoord;
     private double yCoord;
 
-    public Spot(String name, double xCoord, double yCoord ,int voting, Bitmap image, Difficulty difficulty) {
+    public Spot(String name, double xCoord, double yCoord ,int rating, Bitmap image, Difficulty difficulty) {
         this.name = name;
         this.xCoord = xCoord;
         this.yCoord = yCoord;
-        this.voting = voting;
+        this.rating = rating;
         this.image = image;
         this.difficulty = difficulty;
     }
@@ -32,12 +32,12 @@ public class Spot {
         this.name = name;
     }
 
-    public int getVoting() {
-        return voting;
+    public int getRating() {
+        return rating;
     }
 
-    public void setVoting(int voting) {
-        this.voting = voting;
+    public void setRating(int voting) {
+        this.rating = voting;
     }
 
     public Bitmap getImage() {
