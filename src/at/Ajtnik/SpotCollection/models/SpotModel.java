@@ -40,7 +40,7 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         // 2. Get rowView from inflater
-        View rowView = inflater.inflate(R.layout.row, parent, false);
+        View rowView = inflater.inflate(R.layout.item_row, parent, false);
 
         // 3. Get the Item Components
         ImageView ivProfilePic = (ImageView) rowView.findViewById(R.id.ivProfilePic);
