@@ -16,6 +16,7 @@
         <activity android:name=".SettingsActivity"/>
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".MySpots"/>
+        <activity android:name=".SpotsActivity"/>
         <activity android:name=".Favourites"/>
     </application>
 </manifest>
