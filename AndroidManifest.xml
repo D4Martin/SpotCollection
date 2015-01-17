@@ -19,5 +19,6 @@
         <activity android:name=".SpotsActivity"/>
         <activity android:name=".Favourites"/>
         <activity android:name=".SpotView"/>
+        <activity android:name=".MapActivity"/>
     </application>
 </manifest>
