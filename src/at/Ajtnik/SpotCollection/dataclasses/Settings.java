@@ -1,9 +1,11 @@
 package at.Ajtnik.SpotCollection.dataclasses;
 
+import java.io.Serializable;
+
 /**
  * Created by ajtma_000 on 17.01.2015.
  */
-public class Settings {
+public class Settings implements Serializable {
 
     private int searchRadius;
 
