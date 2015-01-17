@@ -55,7 +55,7 @@ public class SettingsActivity extends Activity {
             fis = new FileInputStream("settings.set");
             ois = new ObjectInputStream(fis);
             Settings s = (Settings) ois.readObject();
-            
+            MyActivity.setSettings(s);
         }catch(Exception ex)
         {
             ex.fillInStackTrace();
