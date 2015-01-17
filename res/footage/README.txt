@@ -1,0 +1,1 @@
+Dieser Ordner ist nur für Zwischenablagen
