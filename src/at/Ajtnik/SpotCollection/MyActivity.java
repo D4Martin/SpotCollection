@@ -11,8 +11,7 @@ import android.widget.ImageButton;
 import at.Ajtnik.SpotCollection.dataclasses.Login;
 import at.Ajtnik.SpotCollection.dataclasses.Settings;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 
 public class MyActivity extends Activity {
 
@@ -94,6 +93,15 @@ public class MyActivity extends Activity {
 
     private void saveLoginSave(boolean save, String username, String password)
     {
+        try
+        {
+            FileOutputStream fos = new FileOutputStream(new File("login.set"));
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(new Login(save, username, password));
+        }catch (Exception ex)
+        {
+            ex.fillInStackTrace();
+        }
 
     }
 

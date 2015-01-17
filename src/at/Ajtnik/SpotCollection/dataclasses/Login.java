@@ -1,15 +1,17 @@
 package at.Ajtnik.SpotCollection.dataclasses;
 
+import java.io.Serializable;
+
 /**
  * Created by ajtma_000 on 17.01.2015.
  */
-public class Login {
+public class Login implements Serializable{
 
     private boolean save;
     private String username;
     private String password;
 
-    public Login(boolean save, String username, String password) {
+    public Login(boolean save, String username, String password){
         this.save = save;
         this.username = username;
         this.password = password;
