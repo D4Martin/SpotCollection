@@ -22,7 +22,7 @@
 
             android:id="@+id/btAdd" android:layout_column="4" android:layout_row="0"
             android:layout_gravity="center|right"
-            android:textSize="15pt" android:src="@drawable/plus"/>
+            android:textSize="15pt"/>
     <TextView
 
             android:id="@+id/tvDifficulty" android:layout_row="1" android:layout_column="3"
