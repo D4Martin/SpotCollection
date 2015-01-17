@@ -15,7 +15,6 @@
         <activity android:name=".MenuActivity"/>
         <activity android:name=".SettingsActivity"/>
         <activity android:name=".RegisterActivity"/>
-        <activity android:name=".MySpot"/>
         <activity android:name=".MySpots"/>
         <activity android:name=".Favourites"/>
     </application>
