@@ -57,7 +57,7 @@ public class MyActivity extends Activity {
     public void onLogin()
     {
         login(tfLogUsername.getText().toString(), tfLogPassword.getText().toString());
-
+        String str="";
         Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
         startActivity(intent);
     }
