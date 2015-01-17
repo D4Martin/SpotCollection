@@ -1,6 +1,8 @@
 package at.Ajtnik.SpotCollection;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ListView;
 import at.Ajtnik.SpotCollection.dataclasses.Difficulty;
@@ -32,10 +34,10 @@ public class SpotsActivity extends Activity {
 
     private void generateTestData()
     {
-        spots.add(new Spot("Spot1",35.00,70.00,4,null, Difficulty.Beginner));
-        spots.add(new Spot("Spot2",35.00,70.00,2,null,Difficulty.Beginner));
-        spots.add(new Spot("Spot3",35.00,70.00,4,null,Difficulty.Beginner));
-        spots.add(new Spot("Spot4",35.00,70.00,2,null,Difficulty.Beginner));
-        spots.add(new Spot("Spot5",35.00,70.00,3,null,Difficulty.Beginner));
+        spots.add(new Spot("Spot1",35.00,70.00,4, BitmapFactory.decodeResource(getResources(),R.drawable.index), Difficulty.Beginner));
+        spots.add(new Spot("Spot2",35.00,70.00,2,BitmapFactory.decodeResource(getResources(),R.drawable.index),Difficulty.Beginner));
+        spots.add(new Spot("Spot3",35.00,70.00,4,BitmapFactory.decodeResource(getResources(),R.drawable.index),Difficulty.Beginner));
+        spots.add(new Spot("Spot4",35.00,70.00,2,BitmapFactory.decodeResource(getResources(),R.drawable.index),Difficulty.Beginner));
+        spots.add(new Spot("Spot5",35.00,70.00,3,BitmapFactory.decodeResource(getResources(),R.drawable.index),Difficulty.Beginner));
     }
 }
