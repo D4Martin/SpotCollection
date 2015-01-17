@@ -12,9 +12,13 @@ public class Spot {
     private int voting;
     private Bitmap image;
     private Difficulty difficulty;
+    private double xCoord;
+    private double yCoord;
 
-    public Spot(String name, int voting, Bitmap image, Difficulty difficulty) {
+    public Spot(String name, double xCoord, double yCoord ,int voting, Bitmap image, Difficulty difficulty) {
         this.name = name;
+        this.xCoord = xCoord;
+        this.yCoord = yCoord;
         this.voting = voting;
         this.image = image;
         this.difficulty = difficulty;
@@ -52,5 +56,19 @@ public class Spot {
         this.difficulty = difficulty;
     }
 
+    public double getxCoord() {
+        return xCoord;
+    }
 
+    public void setxCoord(double xCoord) {
+        this.xCoord = xCoord;
+    }
+
+    public double getyCoord() {
+        return yCoord;
+    }
+
+    public void setyCoord(double yCoord) {
+        this.yCoord = yCoord;
+    }
 }
