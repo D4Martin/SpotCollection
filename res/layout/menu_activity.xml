@@ -13,5 +13,5 @@
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:text="Settings" android:id="@+id/btSettings"/>
     <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="MySpots"/>
+            android:text="MySpots" android:id="@+id/btMySpots"/>
 </LinearLayout>
