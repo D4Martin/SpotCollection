@@ -33,7 +33,17 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        if(checkForRegister())
+        {
+            setContentView(R.layout.main);
+        }
+        else
+        {
+            Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+            startActivity(i);
+        }
+
+
 
         tfLogUsername = (EditText) findViewById(R.id.tfLogUsername);
         tfLogPassword = (EditText) findViewById(R.id.tfLogPassword);
@@ -64,7 +74,9 @@ public class MyActivity extends Activity {
 
     private void loadDefaultSettings()
     {
+        //Settings für App
         settings = new Settings(20);
+
     }
 
     private void loadLoginSave()
@@ -122,5 +134,16 @@ public class MyActivity extends Activity {
             }
         }
     }
+
+    private boolean checkForRegister()
+    {
+        if(new File("registered.set").exists())
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 
 }
