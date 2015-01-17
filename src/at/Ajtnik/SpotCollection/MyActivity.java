@@ -33,35 +33,36 @@ public class MyActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(checkForRegister())
-        {
-            setContentView(R.layout.main);
-        }
-        else
+        if(!checkForRegister())
         {
             Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
             startActivity(i);
         }
+        else {
 
 
+            setContentView(R.layout.main);
 
-        tfLogUsername = (EditText) findViewById(R.id.tfLogUsername);
-        tfLogPassword = (EditText) findViewById(R.id.tfLogPassword);
-        cbSaveLoginData = (CheckBox) findViewById(R.id.cbSaveLoginData);
+            tfLogUsername = (EditText) findViewById(R.id.tfLogUsername);
+            tfLogPassword = (EditText) findViewById(R.id.tfLogPassword);
+            cbSaveLoginData = (CheckBox) findViewById(R.id.cbSaveLoginData);
 
-        loadLoginSave();
-        loadDefaultSettings();
+            btLogin = (Button) findViewById(R.id.btLogin);
+            cbSaveLoginData = (CheckBox) findViewById(R.id.cbSaveLoginData);
 
-        btLogin  = (Button)findViewById(R.id.btLogin);
-        cbSaveLoginData = (CheckBox) findViewById(R.id.cbSaveLoginData);
+            loadLoginSave();
+            loadDefaultSettings();
 
-        btLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onLogin();
-            }
-        });
 
+            btLogin.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            onLogin();
+                        }
+                    }
+            );
+        }
     }
 
     public void onLogin()
