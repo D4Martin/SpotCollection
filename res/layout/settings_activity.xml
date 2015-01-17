@@ -11,8 +11,14 @@
 
     <SeekBar android:layout_width="fill_parent"
              android:layout_height="wrap_content"
-             android:layout_weight="10"/>
+             android:layout_weight="10"
+             android:id="@+id/sbRadius"/>
 
+    <Button android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:id="@+id/btSaveSettings"
+            android:text="Save"/>
 
 
 </LinearLayout>
