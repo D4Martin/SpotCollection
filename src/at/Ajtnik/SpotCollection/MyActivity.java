@@ -74,21 +74,24 @@ public class MyActivity extends Activity {
         Login log = null;
         try
         {
-            fis = new FileInputStream("login.set");
-            ois = new ObjectInputStream(fis);
-            log = (Login) ois.readObject();
-
+            if(new java.io.File("login.set").exists()) {
+                fis = new FileInputStream("login.set");
+                ois = new ObjectInputStream(fis);
+                log = (Login) ois.readObject();
+                if(log.isSave())
+                {
+                    tfLogUsername.setText(log.getUsername());
+                    tfLogPassword.setText(log.getPassword());
+                    cbSaveLoginData.setSelected(true);
+                }
+            }
         }catch(Exception ex)
         {
             ex.fillInStackTrace();
         }
 
-        if(log.isSave())
-        {
-            tfLogUsername.setText(log.getUsername());
-            tfLogPassword.setText(log.getPassword());
-            cbSaveLoginData.setSelected(true);
-        }
+
+
     }
 
     private void saveLoginSave(boolean save, String username, String password)

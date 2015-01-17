@@ -61,6 +61,11 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
         return rowView;
     }
 
+    public Spot GetSpot(int i)
+    {
+        return itemsArrayList.get(i);
+    }
+
     @Override
     public void add(Spot object) {
         super.add(object);
