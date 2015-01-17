@@ -33,12 +33,23 @@ public class MenuActivity extends Activity {
                 OnSettings(v);
             }
         });
-
+        btSpots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnSpots(v);
+            }
+        });
     }
 
     public void OnSettings(View v)
     {
         Intent intent = new Intent(getApplicationContext(),SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void OnSpots(View v)
+    {
+        Intent intent = new Intent(getApplicationContext(),SpotsActivity.class);
         startActivity(intent);
     }
 }

@@ -24,7 +24,7 @@ public class SpotModel extends ArrayAdapter<Spot>{
 
 public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
 {
-    super(context, R.layout.row, itemsArrayList);
+    super(context, R.layout.item_row, itemsArrayList);
 
     this.context = context;
     this.itemsArrayList = itemsArrayList;
@@ -48,8 +48,11 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
         TextView tvDifficulty = (TextView) rowView.findViewById(R.id.tvDifficulty);
         RatingBar rabaRating = (RatingBar) rowView.findViewById(R.id.rabaRating);
 
+        rabaRating.setEnabled(false);
+
         // 4. Set the Item Components
-        ivProfilePic.setImageBitmap(itemsArrayList.get(position).getImage());
+
+        ivProfilePic.setImageBitmap( Bitmap.createScaledBitmap(itemsArrayList.get(position).getImage(),200,200,false));
         tvName.setText(itemsArrayList.get(position).getName());
         tvDifficulty.setText(itemsArrayList.get(position).getDifficulty().toString());
         rabaRating.setRating((float)itemsArrayList.get(position).getRating());
@@ -58,5 +61,9 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
         return rowView;
     }
 
-
+    @Override
+    public void add(Spot object) {
+        super.add(object);
+        itemsArrayList.add(object);
+    }
 }
