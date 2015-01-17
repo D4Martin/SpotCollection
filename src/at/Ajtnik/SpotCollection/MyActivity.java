@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import at.Ajtnik.SpotCollection.dataclasses.Settings;
 
 public class MyActivity extends Activity {
 
@@ -13,14 +14,14 @@ public class MyActivity extends Activity {
     private ImageButton menuButton;
     private EditText searchText;
 
-    private int searchRadius;
+    private static Settings settings;
 
-    public int getSearchRadius() {
-        return searchRadius;
+    public static Settings getSettings() {
+        return settings;
     }
 
-    public void setSearchRadius(int searchRadius) {
-        this.searchRadius = searchRadius;
+    public static void setSettings(Settings settings) {
+        this.settings = settings;
     }
 
     @Override
