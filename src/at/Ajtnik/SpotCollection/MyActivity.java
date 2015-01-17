@@ -20,8 +20,8 @@ public class MyActivity extends Activity {
         return settings;
     }
 
-    public static void setSettings(Settings settings) {
-        this.settings = settings;
+    public static void setSettings(Settings set ) {
+        settings = set;
     }
 
     @Override
