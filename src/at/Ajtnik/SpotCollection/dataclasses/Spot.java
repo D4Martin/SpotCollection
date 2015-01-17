@@ -3,10 +3,12 @@ package at.Ajtnik.SpotCollection.dataclasses;
 
 import android.graphics.Bitmap;
 
+import java.io.Serializable;
+
 /**
  * Created by ajtma_000 on 16.01.2015.
  */
-public class Spot {
+public class Spot implements Serializable{
 
     private String name;
     private int rating;
