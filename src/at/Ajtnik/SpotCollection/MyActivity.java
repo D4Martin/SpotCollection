@@ -38,7 +38,7 @@ public class MyActivity extends Activity {
             Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
             startActivity(i);
         }
-        else {
+
 
 
             setContentView(R.layout.main);
@@ -62,12 +62,12 @@ public class MyActivity extends Activity {
                         }
                     }
             );
-        }
+
     }
 
     public void onLogin()
     {
-        login(tfLogUsername.getText().toString(), tfLogPassword.getText().toString());
+       // login(tfLogUsername.getText().toString(), tfLogPassword.getText().toString());
         String str="";
         Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
         startActivity(intent);

@@ -40,7 +40,8 @@ public class RegisterActivity extends Activity {
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                register();
+                //register();
+                finish();
             }
         });
     }
@@ -56,13 +57,15 @@ public class RegisterActivity extends Activity {
 
 
 ////////////////////////////////////////////////////////////////////////
-        try
+      /*  try
         {
-            new FileOutputStream(new File("registered.set"));
+            File f = new File("registered.set");
+            f.createNewFile();
         } catch(Exception ex)
         {
             ex.fillInStackTrace();
-        }
+            System.out.println(ex.toString());
+        }*/
     }
 
 
