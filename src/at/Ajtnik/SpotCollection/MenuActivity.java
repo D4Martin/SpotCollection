@@ -29,19 +29,18 @@ public class MenuActivity extends Activity {
         btSettings = (Button)findViewById(R.id.btSettings);
         btMySpots = (Button)findViewById(R.id.btMySpots);
 
-        btSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OnSettings(v);
-            }
-        });
-        /*btSpots.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OnSpots(v);
-            }
-        });*/
 
+        initMenuButtons();
+
+
+
+
+
+    }
+
+    private void initMenuButtons()
+    {
+        //Spots Activity
         btSpots.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -56,12 +55,29 @@ public class MenuActivity extends Activity {
             }
         });
 
+        btSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnSettings(v);
+            }
+        });
+        btSpots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OnSpots(v);
+            }
+        });
+
+
+
 
     }
 
     public void OnSettings(View v)
     {
-            }
+        Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+        startActivity(i);
+    }
 
     public void OnSpots(View v)
     {
