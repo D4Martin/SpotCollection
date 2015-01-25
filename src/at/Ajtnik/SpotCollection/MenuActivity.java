@@ -75,7 +75,8 @@ public class MenuActivity extends Activity {
 
     public void OnSettings(View v)
     {
-        Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+        Intent i = new Intent(getApplicationContext(), MapActivity.class);
+        //Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
         startActivity(i);
     }
 
