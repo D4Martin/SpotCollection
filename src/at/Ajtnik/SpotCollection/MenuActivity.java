@@ -33,10 +33,6 @@ public class MenuActivity extends Activity {
 
         initMenuButtons();
 
-
-
-
-
     }
 
     private void initMenuButtons()
