@@ -7,16 +7,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * Created by Schauzer on 16.01.2015.
  */
 public class MenuActivity extends Activity {
     private ImageView btSpots;
-    private Button btFavourites;
-    private Button btProfile;
-    private Button btSettings;
-    private Button btMySpots;
+    private ImageView btFavourites;
+    private ImageView btProfile;
+    private ImageView btSettings;
+    private ImageView btMySpots;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,10 +25,10 @@ public class MenuActivity extends Activity {
         setContentView(R.layout.menu_activity);
 
         btSpots = (ImageView)findViewById(R.id.btSpots);
-        btFavourites = (Button)findViewById(R.id.btFavourites);
-        btProfile = (Button)findViewById(R.id.btProfile);
-        btSettings = (Button)findViewById(R.id.btSettings);
-        btMySpots = (Button)findViewById(R.id.btMySpots);
+        btFavourites = (ImageView)findViewById(R.id.btFavourites);
+        btProfile = (ImageView)findViewById(R.id.btProfile);
+        btSettings = (ImageView)findViewById(R.id.btSettings);
+        btMySpots = (ImageView)findViewById(R.id.btMySpots);
 
 
         initMenuButtons();
@@ -40,7 +41,8 @@ public class MenuActivity extends Activity {
 
     private void initMenuButtons()
     {
-        //Spots Activity
+
+        //<editor-fold desc="SetOnTouchListener´s">
         btSpots.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -55,32 +57,82 @@ public class MenuActivity extends Activity {
             }
         });
 
+        btFavourites.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN)
+                    btFavourites.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_favourites_hover));
+                else if(event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent intent = new Intent(getApplicationContext(),FavouritesActivity.class);
+                    startActivity(intent);
+                    btFavourites.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_favourites_normal));
+                }
+                return true;
+            }
+        });
+
+        //</editor-fold>
+
+        //<editor-fold desc="SetOnClickListener´s">
         btSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OnSettings(v);
+                onSettings(v);
             }
         });
         btSpots.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OnSpots(v);
+                onSpots(v);
             }
         });
 
+        btFavourites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onFavourites(v);
+            }
+        });
 
+        btMySpots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onMySpots(v);
+            }
+        });
 
+        btProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onProfile(v);
+            }
+        });
+        //</editor-fold>
 
     }
 
-    public void OnSettings(View v)
+    private void onSettings(View v)
     {
-        Intent i = new Intent(getApplicationContext(), MapActivity.class);
-        //Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
+        Intent i = new Intent(getApplicationContext(), SettingsActivity.class);
         startActivity(i);
     }
 
-    public void OnSpots(View v)
+    private void onSpots(View v)
+    {
+
+    }
+
+    private void onFavourites(View v)
+    {
+
+    }
+
+    private void onProfile(View v)
+    {
+
+    }
+
+    private void onMySpots(View v)
     {
 
     }

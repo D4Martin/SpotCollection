@@ -27,7 +27,7 @@ public class MapActivity extends Activity implements OnMapReadyCallback{
     @Override
     public void onMapReady(GoogleMap googleMap) {
         googleMap.addMarker(new MarkerOptions()
-            .position(new LatLng(0, 0))
+            .position(new LatLng(53.558, 9.927))
             .title("Marker"));
     }
 }

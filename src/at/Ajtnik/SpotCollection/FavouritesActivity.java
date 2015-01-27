@@ -6,7 +6,7 @@ import android.os.Bundle;
 /**
  * Created by ajtma_000 on 17.01.2015.
  */
-public class Favourites extends Activity {
+public class FavouritesActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

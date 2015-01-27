@@ -35,16 +35,19 @@ public class SpotsActivity extends Activity {
 
         lvSpots = (ListView)findViewById(R.id.lvSpots);
         lvSpots.setAdapter(spotmodel);
+
         lvSpots.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast t = Toast.makeText(SpotsActivity.this,"OnClick",Toast.LENGTH_LONG);
+                //Toast.makeText(SpotsActivity.this,"OnClick",Toast.LENGTH_LONG).show();
                 Spot s = spotmodel.GetSpot(position);
                 Intent i = new Intent(getApplicationContext(),SpotView.class);
                 i.putExtra("spotobject",s);
                 startActivity(i);
             }
         });
+
+
     }
 
     public void OnItemClicked(AdapterView<?> parent,View view,int position,long id)

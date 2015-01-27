@@ -24,7 +24,7 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".MySpots"/>
         <activity android:name=".SpotsActivity"/>
-        <activity android:name=".Favourites"/>
+        <activity android:name=".FavouritesActivity"/>
         <activity android:name=".SpotView"/>
         <activity android:name=".MapActivity"/>
         <meta-data

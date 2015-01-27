@@ -6,12 +6,13 @@
 
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:src="@drawable/menu_button_spots_normal" android:id="@+id/btSpots"/>
-    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Favourites" android:id="@+id/btFavourites"/>
-    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
+            android:text="Favourites" android:id="@+id/btFavourites"
+            android:src="@drawable/menu_button_favourites_normal"/>
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:text="Profile" android:id="@+id/btProfile"/>
-    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:text="Settings" android:id="@+id/btSettings"/>
-    <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:text="MySpots" android:id="@+id/btMySpots"/>
 </LinearLayout>
