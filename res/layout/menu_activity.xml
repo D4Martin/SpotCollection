@@ -10,9 +10,10 @@
             android:text="Favourites" android:id="@+id/btFavourites"
             android:src="@drawable/menu_button_favourites_normal"/>
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Profile" android:id="@+id/btProfile"/>
+            android:text="Profile" android:id="@+id/btProfile" android:src="@drawable/menu_button_profile_normal"/>
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="Settings" android:id="@+id/btSettings"/>
+            android:text="Settings" android:id="@+id/btSettings" android:src="@drawable/menu_button_settings_normal"
+            android:baselineAlignBottom="false"/>
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
             android:text="MySpots" android:id="@+id/btMySpots"/>
 </LinearLayout>

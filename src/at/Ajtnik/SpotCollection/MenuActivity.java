@@ -39,6 +39,7 @@ public class MenuActivity extends Activity {
     {
 
         //<editor-fold desc="SetOnTouchListener´s">
+        //Spots
         btSpots.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -53,6 +54,7 @@ public class MenuActivity extends Activity {
             }
         });
 
+        //Favourites
         btFavourites.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -66,6 +68,37 @@ public class MenuActivity extends Activity {
                 return true;
             }
         });
+
+        //Settings
+        btSettings.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN)
+                    btSettings.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_settings_hover));
+                else if(event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent intent = new Intent(getApplicationContext(),SettingsActivity.class);
+                    startActivity(intent);
+                    btSettings.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_settings_normal));
+                }
+                return true;
+            }
+        });
+
+        //Profile
+        btProfile.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN)
+                    btProfile.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_profile_hover));
+                else if(event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+                    startActivity(intent);
+                    btProfile.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_profile_normal));
+                }
+                return true;
+            }
+        });
+
 
         //</editor-fold>
 

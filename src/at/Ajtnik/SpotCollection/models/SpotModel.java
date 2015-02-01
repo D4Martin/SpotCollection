@@ -1,16 +1,20 @@
 package at.Ajtnik.SpotCollection.models;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.TextView;
+import android.widget.*;
 import at.Ajtnik.SpotCollection.R;
+import at.Ajtnik.SpotCollection.SettingsActivity;
+import at.Ajtnik.SpotCollection.SpotView;
+import at.Ajtnik.SpotCollection.SpotsActivity;
 import at.Ajtnik.SpotCollection.dataclasses.Spot;
+import com.google.android.gms.internal.iv;
 
 import java.util.ArrayList;
 
@@ -33,7 +37,7 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
 }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         // 1. Create inflater
         LayoutInflater inflater = (LayoutInflater) context
@@ -57,6 +61,25 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
         tvDifficulty.setText(itemsArrayList.get(position).getDifficulty().toString());
         rabaRating.setRating((float)itemsArrayList.get(position).getRating());
 
+
+        rowView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(getContext(), SpotView.class);
+                i.putExtra("spotobject", itemsArrayList.get(position));
+                try
+                {
+                    getContext().startActivity(i);
+                } catch (Exception ex)
+                {
+                    ex.fillInStackTrace();
+                }
+
+
+            }
+        });
+
+
         // 5. return rowView
         return rowView;
     }
@@ -71,4 +94,5 @@ public SpotModel(Context context, ArrayList<Spot> itemsArrayList)
         super.add(object);
         itemsArrayList.add(object);
     }
+
 }
