@@ -99,6 +99,21 @@ public class MenuActivity extends Activity {
             }
         });
 
+        //MySpots
+        btMySpots.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN)
+                    btMySpots.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_myspots_hover));
+                else if(event.getAction() == MotionEvent.ACTION_UP) {
+                    Intent intent = new Intent(getApplicationContext(),MenuActivity.class);
+                    startActivity(intent);
+                    btMySpots.setImageDrawable(getResources().getDrawable(R.drawable.menu_button_myspots_normal));
+                }
+                return true;
+            }
+        });
+
 
         //</editor-fold>
 

@@ -15,5 +15,6 @@
             android:text="Settings" android:id="@+id/btSettings" android:src="@drawable/menu_button_settings_normal"
             android:baselineAlignBottom="false"/>
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="20"
-            android:text="MySpots" android:id="@+id/btMySpots"/>
+            android:text="MySpots" android:id="@+id/btMySpots" android:focusableInTouchMode="false"
+            android:src="@drawable/menu_button_myspots_normal"/>
 </LinearLayout>
